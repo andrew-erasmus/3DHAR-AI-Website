@@ -1282,6 +1282,16 @@ footer {
     max-width: 100%;
   }
 
+  .resources-container {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-tabs {
+    display: block;
+    padding: 20px;
+    max-width: 100%;
+  }
+
   .tab-item {
     width: 100%;
     margin-bottom: 10px;
