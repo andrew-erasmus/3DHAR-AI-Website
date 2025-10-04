@@ -118,14 +118,6 @@ tabs.forEach((tab) => {
   });
 });
 
-// Form submission
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  // Add your form submission logic here
-  alert("Message sent! We'll get back to you soon.");
-  this.reset();
-});
-
 // Initialize particles
 createParticles();
 
@@ -220,3 +212,29 @@ setInterval(() => {
     }
   });
 }, 3000);
+
+// Mail sending functionality:
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent actual form submission
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    const recipients =
+      "andr3werasmus@gmail.com,ki5halanp4ther@gmail.com,temi0072@gmail.com";
+
+    const mailtoLink = `mailto:${recipients}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`;
+
+    // Open the default mail client
+    window.location.href = mailtoLink;
+    this.reset();
+  });
