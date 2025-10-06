@@ -1381,7 +1381,7 @@ footer {
   transform: scale(1.1);
 }
 
-.code-link {
+.contribution-link {
   text-decoration: none;
   color: #f2f2f2;
   border: solid var(--blue-dark) 1px;
@@ -1389,6 +1389,11 @@ footer {
   padding-left: 10px;
   padding-right: 10px;
   box-shadow: inset 0 0 10px rgba(11, 89, 222, 0.5);
+}
+
+.contribution-link:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
 }
 
 .team-headshot > img {
@@ -1400,6 +1405,14 @@ footer {
 
 /* Individual Pages Styling */
 .individual-downloads-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: fit-content;
+  align-items: stretch;
+}
+
+.contribution-container {
   display: flex;
   gap: 20px;
   flex-direction: column;
