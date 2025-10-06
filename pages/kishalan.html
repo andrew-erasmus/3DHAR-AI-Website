@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3DHAR-AI</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../styles.css" rel="stylesheet" />
+    <!--
+
+TemplateMo 596 Electric Xtra
+
+https://templatemo.com/tm-596-electric-xtra
+
+-->
+  </head>
+  <body>
+    <!-- Animated Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Animated Shapes -->
+    <div class="shapes-container">
+      <div class="shape shape-circle"></div>
+      <div class="shape shape-triangle"></div>
+      <div class="shape shape-square"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo-link">
+          <svg
+            class="logo-svg"
+            viewBox="0 0 40 40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient
+                id="logoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop
+                  offset="0%"
+                  style="stop-color: #0b59de; stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: #f2f2f2; stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+            <polygon
+              points="20,2 38,14 38,26 20,38 2,26 2,14"
+              fill="none"
+              stroke="url(#logoGradient)"
+              stroke-width="2"
+            />
+            <polygon
+              points="20,8 32,16 32,24 20,32 8,24 8,16"
+              fill="url(#logoGradient)"
+              opacity="0.3"
+            />
+            <circle cx="20" cy="20" r="3" fill="url(#logoGradient)" />
+          </svg>
+          <span class="logo-text">3DHAR-AI</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html" class="nav-link">Return Home</a></li>
+          <li><a href="#insights" class="nav-link">Contributions</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="text-rotator">
+          <div class="text-set active">
+            <h1 class="glitch-text" data-text="Welcome">Welcome</h1>
+            <p class="subtitle">Kishalan's Contributions to 3DHAR-AI</p>
+          </div>
+        </div>
+      </div>
+      <div class="cta-container">
+        <a href="#insights" class="cta-button cta-primary">Learn More</a>
+        <a href="../index.html" class="cta-button cta-secondary">Return Home</a>
+      </div>
+    </section>
+
+    <!-- Insights Section with Tabs -->
+    <section class="insights" id="insights">
+      <h2 class="section-title">Core Contributions</h2>
+      <div class="insights-container">
+        <div class="insights-tabs">
+          <div class="tab-item active" data-tab="introduction">
+            <span class="tab-icon">⚡</span>
+            <span>Introduction</span>
+          </div>
+          <div class="tab-item" data-tab="methodology">
+            <span class="tab-icon">🔬</span>
+            <span>Methodology</span>
+          </div>
+          <div class="tab-item" data-tab="stgnn">
+            <span class="tab-icon">🌐</span>
+            <span>STGNNs</span>
+          </div>
+          <div class="tab-item" data-tab="data-aug">
+            <span class="tab-icon">🛠️</span>
+            <span>Data Augmentation</span>
+          </div>
+          <div class="tab-item" data-tab="results">
+            <span class="tab-icon">📊</span>
+            <span>Results</span>
+          </div>
+        </div>
+        <div class="insights-content">
+          <div class="content-panel active" id="introduction">
+            <h3>Introduction</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
+              euismod nunc. Praesent pharetra eu libero vitae volutpat. Aenean
+              vitae finibus nisi. Praesent ut velit condimentum mi blandit
+              fringilla sit amet a velit. Proin dapibus efficitur nunc, at
+              ultricies enim convallis vel. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Duis nec iaculis urna. Phasellus
+              iaculis ex at eros sodales gravida. Phasellus vitae hendrerit
+              libero, ac egestas arcu. In gravida a velit a dignissim. Maecenas
+              eros sapien, elementum at tincidunt et, fringilla ut mi. Ut varius
+              bibendum luctus. In a augue sit amet ligula eleifend eleifend sit
+              amet a diam. Vestibulum ante ipsum primis in faucibus orci luctus
+              et ultrices posuere cubilia curae; Phasellus eu orci leo. Proin in
+              tellus ut justo gravida faucibus. Morbi id tempor nisi. Ut non
+              dapibus quam, ut egestas lorem. Donec lacinia condimentum sem id
+              venenatis. Proin diam nisi, tempor sit amet arcu et, tincidunt
+              feugiat ante. Integer suscipit libero in urna imperdiet, ac
+              bibendum dolor pellentesque. In vehicula hendrerit imperdiet.
+              Vivamus malesuada scelerisque tellus eget viverra. Suspendisse
+              consequat nulla erat, sagittis aliquet massa iaculis ac. In
+              pellentesque, ipsum quis vestibulum pretium, augue lectus euismod
+              sem, auctor lacinia ante nibh at risus. Vestibulum pulvinar
+              lacinia.
+            </p>
+            <ul class="insights-list">
+              <li>Sub-millisecond response times</li>
+              <li>99.99% uptime guarantee</li>
+              <li>Automatic scaling based on demand</li>
+              <li>Real-time data synchronization</li>
+            </ul>
+          </div>
+          <div class="content-panel" id="methodology">
+            <h3>Methodology</h3>
+            <p>
+              Your data is protected by the most advanced encryption protocols
+              available. Multi-layered security ensures complete protection
+              against cyber threats. You may tell your friends about TemplateMo
+              free css website and how easy it is.
+            </p>
+            <ul class="insights-list">
+              <li>256-bit AES encryption</li>
+              <li>Biometric authentication</li>
+              <li>Zero-knowledge architecture</li>
+              <li>Real-time threat detection</li>
+              <li>Automated security updates</li>
+            </ul>
+          </div>
+          <div class="content-panel" id="stgnn">
+            <h3>Spatial-Temporal Graph Neural Networks</h3>
+            <p>
+              Connect to our worldwide infrastructure that spans across
+              continents. Seamless integration with existing systems and
+              future-proof architecture.
+            </p>
+            <ul class="insights-list">
+              <li>200+ global data centers</li>
+              <li>Intelligent routing algorithms</li>
+              <li>Cross-platform compatibility</li>
+              <li>5G and satellite connectivity</li>
+              <li>Decentralized architecture</li>
+            </ul>
+          </div>
+          <div class="content-panel" id="data-aug">
+            <h3>Data Augmentation</h3>
+            <p>
+              Harness the power of AI-driven insights to make data-driven
+              decisions. Real-time analytics and predictive modeling at your
+              fingertips.
+            </p>
+            <ul class="insights-list">
+              <li>Machine learning algorithms</li>
+              <li>Predictive analytics</li>
+              <li>Custom dashboard creation</li>
+              <li>Real-time data visualization</li>
+              <li>Automated reporting</li>
+            </ul>
+          </div>
+          <div class="content-panel" id="results">
+            <h3>Results</h3>
+            <p>
+              Connect with thousands of apps and services through our universal
+              API. Built to work with your existing tools and workflows.
+            </p>
+            <ul class="insights-list">
+              <li>RESTful API architecture</li>
+              <li>WebSocket support</li>
+              <li>SDK for major platforms</li>
+              <li>One-click integrations</li>
+              <li>Custom webhook support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p class="copyright">
+          © 2025 3DHAR-AI. | Design:
+          <a
+            href="https://templatemo.com"
+            target="_blank"
+            rel="nofollow noopener"
+            >TemplateMo</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="../scripts.js"></script>
+  </body>
+</html>
