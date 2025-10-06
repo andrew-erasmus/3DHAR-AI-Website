@@ -131,52 +131,53 @@ https://templatemo.com/tm-596-electric-xtra
         </div>
         <div class="insights-content">
           <div class="content-panel active" id="eda">
-            <h3>Exploratory Data Analysis</h3>
+            <h3>Exploratory Data Analysis (EDA)</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
-              euismod nunc. Praesent pharetra eu libero vitae volutpat. Aenean
-              vitae finibus nisi. Praesent ut velit condimentum mi blandit
-              fringilla sit amet a velit. Proin dapibus efficitur nunc, at
-              ultricies enim convallis vel. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Duis nec iaculis urna. Phasellus
-              iaculis ex at eros sodales gravida. Phasellus vitae hendrerit
-              libero, ac egestas arcu. In gravida a velit a dignissim. Maecenas
-              eros sapien, elementum at tincidunt et, fringilla ut mi. Ut varius
-              bibendum luctus. In a augue sit amet ligula eleifend eleifend sit
-              amet a diam. Vestibulum ante ipsum primis in faucibus orci luctus
-              et ultrices posuere cubilia curae; Phasellus eu orci leo. Proin in
-              tellus ut justo gravida faucibus. Morbi id tempor nisi. Ut non
-              dapibus quam, ut egestas lorem. Donec lacinia condimentum sem id
-              venenatis. Proin diam nisi, tempor sit amet arcu et, tincidunt
-              feugiat ante. Integer suscipit libero in urna imperdiet, ac
-              bibendum dolor pellentesque. In vehicula hendrerit imperdiet.
-              Vivamus malesuada scelerisque tellus eget viverra. Suspendisse
-              consequat nulla erat, sagittis aliquet massa iaculis ac. In
-              pellentesque, ipsum quis vestibulum pretium, augue lectus euismod
-              sem, auctor lacinia ante nibh at risus. Vestibulum pulvinar
-              lacinia.
+              In this project, we conducted EDA on the CASAS Aruba and Milan
+              datasets. For my contribution, I focused on the following:
             </p>
             <ul class="insights-list">
-              <li>Sub-millisecond response times</li>
-              <li>99.99% uptime guarantee</li>
-              <li>Automatic scaling based on demand</li>
-              <li>Real-time data synchronization</li>
+              <li>
+                Conducted a detailed Exploratory Data Analysis, with a specific
+                focus on the CASAS <strong>Aruba</strong> dataset.
+              </li>
+              <li>
+                The analysis focused on identifying and plotting
+                <strong
+                  >activity transitions, class distributions, and activity
+                  durations
+                </strong>
+                to determine a baseline understanding of the data.
+              </li>
+              <li>
+                The insights gathered were used to contextualize and inform the
+                analysis of all subsequent Human Activity Recognition (HAR) and
+                Human Activity Prediction (HAP) experimental results.
+              </li>
             </ul>
           </div>
           <div class="content-panel" id="cnn">
             <h3>CNN Implementation & Pipeline Development</h3>
             <p>
-              Your data is protected by the most advanced encryption protocols
-              available. Multi-layered security ensures complete protection
-              against cyber threats. You may tell your friends about TemplateMo
-              free css website and how easy it is.
+              During the beginning phases of the project, I contributed to the
+              development of the base pipeline that was shared among 3DHAR-AI
+              members. With this, I also developed the
+              <strong>Convolutional Neural Network (CNN)</strong> baseline
+              algorithm based on literature. This algorithm was used as a
+              baseline for all experiments in the 3DHAR-AI project.
             </p>
+            <p>Developing this baseline involved:</p>
             <ul class="insights-list">
-              <li>256-bit AES encryption</li>
-              <li>Biometric authentication</li>
-              <li>Zero-knowledge architecture</li>
-              <li>Real-time threat detection</li>
-              <li>Automated security updates</li>
+              <li>Locating a standard 1D-CNN architecture from literature.</li>
+              <li>
+                Implementing the CNN architecture for HAR and HAP by
+                implementing:
+                <ol>
+                  <li>Two 1D convolution blocks</li>
+                  <li>A global max pooling layer</li>
+                  <li>A fully connected classification head</li>
+                </ol>
+              </li>
             </ul>
           </div>
           <div class="content-panel" id="stgnn">
@@ -184,32 +185,103 @@ https://templatemo.com/tm-596-electric-xtra
               Dynamic Spatial-Temporal Aware Graph Neural Network (DSTAGNN)
             </h3>
             <p>
-              Connect to our worldwide infrastructure that spans across
-              continents. Seamless integration with existing systems and
-              future-proof architecture.
+              A main contribution to 3DHAR-AI was the development and
+              implementation of the state-of-the-art STGNN known as DSTAGNN.
+            </p>
+            <p>
+              This algorithm was originally designed for
+              <strong>traffic data</strong>, and needed modification for the HAR
+              and HAP tasks. The main changes I made were:
             </p>
             <ul class="insights-list">
-              <li>200+ global data centers</li>
-              <li>Intelligent routing algorithms</li>
-              <li>Cross-platform compatibility</li>
-              <li>5G and satellite connectivity</li>
-              <li>Decentralized architecture</li>
+              <li>
+                Modifying the <strong>STAG & STRG</strong> (learned graph
+                structure) generation algorithm to suit human activity data
+                rather than traffic data.
+              </li>
+              <li>
+                Modifying the <strong>input features</strong> to suit DSTAGNN
+              </li>
+              <li>
+                Modifying the base pipeline to tune, train and test DSTAGNN.
+              </li>
+              <li>
+                Adding a <strong>classification head</strong> (adding a 1D
+                convolution and a fully connected layer) to predict activity
+                classes
+              </li>
             </ul>
+            <p></p>
+            <p>
+              Another contribution I made was to perform
+              <strong>Network Analysis</strong> on DSTAGNN's learned graph
+              structure. These graphs were extracted and analysed in order to
+              gain insights into the underlying dynamics of human activity.
+            </p>
+            <p>
+              For results on DSTAGNN's performance, please see the final paper
+              in the <strong>"Deliverables"</strong> section below
+            </p>
           </div>
           <div class="content-panel" id="data-aug">
             <h3>Data Augmentation</h3>
             <p>
-              Harness the power of AI-driven insights to make data-driven
-              decisions. Real-time analytics and predictive modeling at your
-              fingertips.
+              A unique contribution that I made to the 3DHAR-AI project was
+              novel data augmentation functionality.
             </p>
+            <p>
+              The purpose of the data augmentation tool was to use a
+              <strong>3D digital twin environment</strong> to simulate and
+              record <strong>underrepresented activity classes</strong> in the
+              sparse smart home datasets.
+            </p>
+            <p>
+              This was done to investigate if increasing the volume and
+              diversity of training data for these activities would
+              <strong>improve the performance</strong> of Human Activity
+              Recognition (HAR) and Prediction (HAP) models.
+            </p>
+            <p>For this research, I:</p>
             <ul class="insights-list">
-              <li>Machine learning algorithms</li>
-              <li>Predictive analytics</li>
-              <li>Custom dashboard creation</li>
-              <li>Real-time data visualization</li>
-              <li>Automated reporting</li>
+              <li>
+                Developed a custom 3D digital twin environment in
+                <strong>Unity 3D</strong> for the CASAS Milan and Aruba
+                datasets.
+              </li>
+              <li>
+                Built tools to <strong>manually control</strong> an agent, which
+                could then be used to
+                <strong>simulate and record activities</strong> from
+                underrepresented classes.
+              </li>
+              <li>
+                Employed a <strong>time interpolation</strong> to add the
+                simulated activities to the dataset's history without disrupting
+                its original temporal structure.
+              </li>
+              <li>
+                Augmented datasets and tested algorithm performance for HAR and
+                HAP
+              </li>
             </ul>
+            <p></p>
+            <p>
+              Experiments with the augmented datasets showed a
+              <strong>drastic performance increase</strong> for the HAR task,
+              proving the strategy's potential for improving models on sparse
+              human activity data.
+            </p>
+            <h3>Images:</h3>
+            <div class="sim-image-container">
+              <img
+                class="sim-image"
+                style="margin-top: 20px"
+                src="../images/data-aug-1.png"
+                alt=""
+              />
+              <img class="sim-image" src="../images/data-aug-2.png" alt="" />
+              <img class="sim-image" src="../images/data-aug-3.png" alt="" />
+            </div>
           </div>
           <div class="content-panel" id="deliverables">
             <h3>Deliverables</h3>
@@ -293,7 +365,7 @@ https://templatemo.com/tm-596-electric-xtra
     <footer>
       <div class="footer-content">
         <p class="copyright">
-          © 2025 3DHAR-AI. | Design:
+          © 2025 3DHAR-AI / Design:
           <a
             href="https://templatemo.com"
             target="_blank"
