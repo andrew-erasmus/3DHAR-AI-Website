@@ -9,13 +9,6 @@
       rel="stylesheet"
     />
     <link href="../styles.css" rel="stylesheet" />
-    <!--
-
-TemplateMo 596 Electric Xtra
-
-https://templatemo.com/tm-596-electric-xtra
-
--->
   </head>
   <body>
     <!-- Animated Grid Background -->
@@ -43,21 +36,9 @@ https://templatemo.com/tm-596-electric-xtra
             xmlns="http://www.w3.org/2000/svg"
           >
             <defs>
-              <linearGradient
-                id="logoGradient"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop
-                  offset="0%"
-                  style="stop-color: #0b59de; stop-opacity: 1"
-                />
-                <stop
-                  offset="100%"
-                  style="stop-color: #f2f2f2; stop-opacity: 1"
-                />
+              <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: #0b59de; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: #f2f2f2; stop-opacity: 1" />
               </linearGradient>
             </defs>
             <polygon
@@ -103,125 +84,130 @@ https://templatemo.com/tm-596-electric-xtra
       </div>
     </section>
 
-    <!-- Insights Section with Tabs -->
+    <!-- Insights Section -->
     <section class="insights" id="insights">
       <h2 class="section-title">Core Contributions</h2>
       <div class="insights-container">
         <div class="insights-tabs">
           <div class="tab-item active" data-tab="introduction">
-            <span class="tab-icon">⚡</span>
-            <span>Introduction</span>
+            <span class="tab-icon">⚡</span><span>Introduction</span>
           </div>
           <div class="tab-item" data-tab="methodology">
-            <span class="tab-icon">🔬</span>
-            <span>Methodology</span>
+            <span class="tab-icon">🔬</span><span>Methodology</span>
           </div>
           <div class="tab-item" data-tab="stgnn">
-            <span class="tab-icon">🌐</span>
-            <span>STGNNs</span>
+            <span class="tab-icon">🌐</span><span>STGNNs</span>
           </div>
-          <div class="tab-item" data-tab="data-aug">
-            <span class="tab-icon">🛠️</span>
-            <span>Data Augmentation</span>
+          <div class="tab-item" data-tab="time-encoding">
+            <span class="tab-icon">⏱️</span><span>Time Encoding</span>
           </div>
           <div class="tab-item" data-tab="results">
-            <span class="tab-icon">📊</span>
-            <span>Results</span>
+            <span class="tab-icon">📊</span><span>Results</span>
           </div>
         </div>
+
+        <!-- Content Panels -->
         <div class="insights-content">
           <div class="content-panel active" id="introduction">
             <h3>Introduction</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
-              euismod nunc. Praesent pharetra eu libero vitae volutpat. Aenean
-              vitae finibus nisi. Praesent ut velit condimentum mi blandit
-              fringilla sit amet a velit. Proin dapibus efficitur nunc, at
-              ultricies enim convallis vel. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Duis nec iaculis urna. Phasellus
-              iaculis ex at eros sodales gravida. Phasellus vitae hendrerit
-              libero, ac egestas arcu. In gravida a velit a dignissim. Maecenas
-              eros sapien, elementum at tincidunt et, fringilla ut mi. Ut varius
-              bibendum luctus. In a augue sit amet ligula eleifend eleifend sit
-              amet a diam. Vestibulum ante ipsum primis in faucibus orci luctus
-              et ultrices posuere cubilia curae; Phasellus eu orci leo. Proin in
-              tellus ut justo gravida faucibus. Morbi id tempor nisi. Ut non
-              dapibus quam, ut egestas lorem. Donec lacinia condimentum sem id
-              venenatis. Proin diam nisi, tempor sit amet arcu et, tincidunt
-              feugiat ante. Integer suscipit libero in urna imperdiet, ac
-              bibendum dolor pellentesque. In vehicula hendrerit imperdiet.
-              Vivamus malesuada scelerisque tellus eget viverra. Suspendisse
-              consequat nulla erat, sagittis aliquet massa iaculis ac. In
-              pellentesque, ipsum quis vestibulum pretium, augue lectus euismod
-              sem, auctor lacinia ante nibh at risus. Vestibulum pulvinar
-              lacinia.
+              Human Activity Recognition (HAR) and Prediction (HAP) enable intelligent
+              smart home systems that can monitor, assist, and adapt to human behavior.
+              Using motion, door, and temperature sensors, these systems interpret
+              daily routines such as cooking, relaxing, and sleeping.
             </p>
-            <ul class="insights-list">
-              <li>Sub-millisecond response times</li>
-              <li>99.99% uptime guarantee</li>
-              <li>Automatic scaling based on demand</li>
-              <li>Real-time data synchronization</li>
-            </ul>
+            <p>
+              Traditional deep learning methods like CNNs and LSTMs perform well on
+              sensor-based HAR but fail to capture explicit spatial relationships between
+              sensors. Spatial-Temporal Graph Neural Networks (STGNNs) address this
+              limitation by jointly modeling both spatial dependencies and temporal
+              dynamics. This work investigates whether STGNNs, specifically Graph
+              WaveNet and AGCRN, can outperform conventional baselines.
+            </p>
           </div>
+
           <div class="content-panel" id="methodology">
             <h3>Methodology</h3>
             <p>
-              Your data is protected by the most advanced encryption protocols
-              available. Multi-layered security ensures complete protection
-              against cyber threats. You may tell your friends about TemplateMo
-              free css website and how easy it is.
+              Two public smart home datasets from the CASAS project — <strong>Aruba</strong>
+              and <strong>Milan</strong> — were used. These datasets include motion, door,
+              and temperature sensors with annotated daily activities.
             </p>
-            <ul class="insights-list">
-              <li>256-bit AES encryption</li>
-              <li>Biometric authentication</li>
-              <li>Zero-knowledge architecture</li>
-              <li>Real-time threat detection</li>
-              <li>Automated security updates</li>
-            </ul>
+            <p>
+              Preprocessing involved cleaning anomalies, assigning activities to sensor
+              readings, and converting the event-driven data into structured windows.
+              Each sample was represented as a 4D tensor:
+              <code>(windows × steps × sensors × features)</code>.
+            </p>
+            <p>
+              Models were evaluated using 3-fold walk-forward validation to preserve
+              temporal order, and the weighted F1-score was used as the primary metric.
+            </p>
           </div>
+
           <div class="content-panel" id="stgnn">
             <h3>Spatial-Temporal Graph Neural Networks</h3>
             <p>
-              Connect to our worldwide infrastructure that spans across
-              continents. Seamless integration with existing systems and
-              future-proof architecture.
+              Two STGNN architectures were implemented:
             </p>
             <ul class="insights-list">
-              <li>200+ global data centers</li>
-              <li>Intelligent routing algorithms</li>
-              <li>Cross-platform compatibility</li>
-              <li>5G and satellite connectivity</li>
-              <li>Decentralized architecture</li>
+              <li>
+                <strong>Graph WaveNet (GWN):</strong> Combines graph convolutions with
+                temporal convolutions. Learns an adaptive adjacency matrix, allowing
+                sensor relationships to be inferred directly from data.
+              </li>
+              <li>
+                <strong>Adaptive Graph Convolutional Recurrent Network (AGCRN):</strong>
+                Integrates graph convolutions within recurrent units, learning
+                both spatial and temporal patterns. It includes modules that adaptively
+                generate graph structures and node-specific parameters.
+              </li>
             </ul>
-          </div>
-          <div class="content-panel" id="data-aug">
-            <h3>Data Augmentation</h3>
             <p>
-              Harness the power of AI-driven insights to make data-driven
-              decisions. Real-time analytics and predictive modeling at your
-              fingertips.
+              Both models aim to capture complex sensor dependencies that traditional
+              architectures overlook.
+            </p>
+          </div>
+
+          <div class="content-panel" id="time-encoding">
+            <h3>Time Encoding</h3>
+            <p>
+              Smart home sensor data is irregular and event-driven. Instead of sampling
+              at fixed intervals, we engineered time-based features to encode the passage
+              of time explicitly.
             </p>
             <ul class="insights-list">
-              <li>Machine learning algorithms</li>
-              <li>Predictive analytics</li>
-              <li>Custom dashboard creation</li>
-              <li>Real-time data visualization</li>
-              <li>Automated reporting</li>
+              <li>Δt<sub>global</sub>: Time since the last event from any sensor</li>
+              <li>Δt<sub>sensor</sub>: Time since the last activation of the same sensor</li>
+              <li>Sensor value: Encoded as -1 or 1 depending on state</li>
             </ul>
+            <p>
+              All time deltas were log-normalized to reduce skew and compress large
+              gaps. This representation improved model stability and significantly
+              increased performance compared to fixed-interval sampling.
+            </p>
           </div>
+
           <div class="content-panel" id="results">
             <h3>Results</h3>
             <p>
-              Connect with thousands of apps and services through our universal
-              API. Built to work with your existing tools and workflows.
+              On the <strong>Aruba dataset</strong>, the AGCRN and LSTM achieved the highest
+              weighted F1-scores (0.82), while Graph WaveNet performed best with
+              shorter windows. On the more challenging <strong>Milan dataset</strong>,
+              all models performed similarly (≈0.53 F1), reflecting greater variability
+              and noise.
             </p>
-            <ul class="insights-list">
-              <li>RESTful API architecture</li>
-              <li>WebSocket support</li>
-              <li>SDK for major platforms</li>
-              <li>One-click integrations</li>
-              <li>Custom webhook support</li>
-            </ul>
+            <p>
+              For Human Activity Prediction (HAP), performance declined across all
+              models due to increased task difficulty. Nevertheless, STGNNs learned
+              meaningful inter-room transitions, demonstrating interpretability
+              advantages.
+            </p>
+            <p>
+              Overall, STGNNs offered comparable accuracy to CNN and LSTM baselines,
+              with added transparency in their learned graph structures — a promising
+              step toward trustworthy smart home AI.
+            </p>
           </div>
         </div>
       </div>
@@ -231,11 +217,8 @@ https://templatemo.com/tm-596-electric-xtra
     <footer>
       <div class="footer-content">
         <p class="copyright">
-          © 2025 3DHAR-AI. | Design:
-          <a
-            href="https://templatemo.com"
-            target="_blank"
-            rel="nofollow noopener"
+          © 2025 3DHAR-AI | Design by
+          <a href="https://templatemo.com" target="_blank" rel="nofollow noopener"
             >TemplateMo</a
           >
         </p>
