@@ -848,29 +848,19 @@ nav.scrolled {
 }
 
 .overview-content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 100vh;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.8;
 }
-
 
 .overview-text h2 {
-  font-size: 3rem;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.overview-text ol {
-  display: inline-block;
-  text-align: left;
-  font-size: 1.3rem;
-  line-height: 2;
+  font-family: "Orbitron", monospace;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(45deg, var(--blue), var(--white));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .overview-text p {
@@ -930,7 +920,6 @@ nav.scrolled {
   justify-content: center;
   animation: float 6s ease-in-out infinite;
 }
-
 
 .hexagon {
   position: absolute;
