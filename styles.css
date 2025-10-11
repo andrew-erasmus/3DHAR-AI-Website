@@ -848,19 +848,29 @@ nav.scrolled {
 }
 
 .overview-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
 }
 
+
 .overview-text h2 {
-  font-family: "Orbitron", monospace;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  background: linear-gradient(45deg, var(--blue), var(--white));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.overview-text ol {
+  display: inline-block;
+  text-align: left;
+  font-size: 1.3rem;
+  line-height: 2;
 }
 
 .overview-text p {
