@@ -931,6 +931,23 @@ nav.scrolled {
   animation: float 6s ease-in-out infinite;
 }
 
+.overview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.overview-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.overview-text ol {
+  display: inline-block;
+  text-align: left;
+}
+
 .hexagon {
   position: absolute;
   width: 100px;
