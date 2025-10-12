@@ -131,98 +131,115 @@ https://templatemo.com/tm-596-electric-xtra
         </div>
         <div class="insights-content">
           <div class="content-panel active" id="introduction">
-            <h3>Introduction</h3>
+            <h3>LSTM Implementation</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
-              euismod nunc. Praesent pharetra eu libero vitae volutpat. Aenean
-              vitae finibus nisi. Praesent ut velit condimentum mi blandit
-              fringilla sit amet a velit. Proin dapibus efficitur nunc, at
-              ultricies enim convallis vel. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Duis nec iaculis urna. Phasellus
-              iaculis ex at eros sodales gravida. Phasellus vitae hendrerit
-              libero, ac egestas arcu. In gravida a velit a dignissim. Maecenas
-              eros sapien, elementum at tincidunt et, fringilla ut mi. Ut varius
-              bibendum luctus. In a augue sit amet ligula eleifend eleifend sit
-              amet a diam. Vestibulum ante ipsum primis in faucibus orci luctus
-              et ultrices posuere cubilia curae; Phasellus eu orci leo. Proin in
-              tellus ut justo gravida faucibus. Morbi id tempor nisi. Ut non
-              dapibus quam, ut egestas lorem. Donec lacinia condimentum sem id
-              venenatis. Proin diam nisi, tempor sit amet arcu et, tincidunt
-              feugiat ante. Integer suscipit libero in urna imperdiet, ac
-              bibendum dolor pellentesque. In vehicula hendrerit imperdiet.
-              Vivamus malesuada scelerisque tellus eget viverra. Suspendisse
-              consequat nulla erat, sagittis aliquet massa iaculis ac. In
-              pellentesque, ipsum quis vestibulum pretium, augue lectus euismod
-              sem, auctor lacinia ante nibh at risus. Vestibulum pulvinar
-              lacinia.
+              As part of the beginning stages of our project, I contributed to the adaptation
+              and implementation of the LSTM model that was used as one of the baselines among the group. 
+              This model was compared to the STGNNs that were later tested.
             </p>
             <ul class="insights-list">
-              <li>Sub-millisecond response times</li>
-              <li>99.99% uptime guarantee</li>
-              <li>Automatic scaling based on demand</li>
-              <li>Real-time data synchronization</li>
+              <li>Adjust the input and output dimensions — Modify the model architecture to match the shape and format of the new dataset (e.g., number of features, sequence length, output classes).</li>
+              <li>Retrain with task-specific data — Fine-tune or train the model on the new dataset to learn domain-relevant temporal patterns.</li>
+              <li>Optimize hyperparameters — Update learning rate, batch size, number of layers, and hidden units to improve performance on the new task.</li>
             </ul>
           </div>
           <div class="content-panel" id="methodology">
-            <h3>Methodology</h3>
+            <h3>GRUGCN model Implementation</h3>
             <p>
-              Your data is protected by the most advanced encryption protocols
-              available. Multi-layered security ensures complete protection
-              against cyber threats. You may tell your friends about TemplateMo
-              free css website and how easy it is.
+              My primary contribution to the 3DHAR-AI project was the adaptation and implementation of a state-of-the-art Spatio-Temporal Graph Neural Network (STGNN), namely the GRUGCN model.
+              The GRUGCN architecture integrates two key components: a Graph Convolutional Network (GCN) for capturing spatial relationships, and a Gated Recurrent Unit (GRU) for modeling temporal dependencies. This combination enables the model to effectively learn the evolution of spatial patterns over time, making it particularly well-suited for tasks that require understanding both spatial and temporal dynamics, such as sensor-based Human Activity Recognition (HAR) and Human Activity Prediction (HAP).
+              The models performance was evaluated and compared against baseline approaches. Additionally, I performed a confusion matrix analysis to identify specific activity classes where the model demonstrated strong performance and where it encountered challenges.
             </p>
-            <ul class="insights-list">
-              <li>256-bit AES encryption</li>
-              <li>Biometric authentication</li>
-              <li>Zero-knowledge architecture</li>
-              <li>Real-time threat detection</li>
-              <li>Automated security updates</li>
-            </ul>
           </div>
           <div class="content-panel" id="stgnn">
-            <h3>Spatial-Temporal Graph Neural Networks</h3>
+            <h3>Adaptive GRUGCN models </h3>
             <p>
-              Connect to our worldwide infrastructure that spans across
-              continents. Seamless integration with existing systems and
-              future-proof architecture.
+              Due to the original GRUGCN model only taking in a static adjacency matrix,
+               I investigated adaptive learning mechanisms for the GRUGCN model architecture to evaluate whether performance could be improved beyond 
+               the fixed adjacency matrix. Specifically, I explored two approaches for implementing a dynamic adjacency mechanism:.
             </p>
             <ul class="insights-list">
-              <li>200+ global data centers</li>
-              <li>Intelligent routing algorithms</li>
-              <li>Cross-platform compatibility</li>
-              <li>5G and satellite connectivity</li>
-              <li>Decentralized architecture</li>
+              <li> Node Embeddings:
+                Inspired by GraphWaveNet, this method introduced two learnable embedding matrices, with each sensor assigned a unique vector in both matrices.</li>
+              <li> Attention-Based Mechanism
+                In this implementation, I extended it with an attention based adaptive adjacency mechanism inspired by Graph Attention Networks (GAT) and the adaptive adjacency approaches in GraphWaveNet and AGCRN.</li>
             </ul>
           </div>
           <div class="content-panel" id="data-aug">
-            <h3>Data Augmentation</h3>
-            <p>
-              Harness the power of AI-driven insights to make data-driven
-              decisions. Real-time analytics and predictive modeling at your
-              fingertips.
-            </p>
-            <ul class="insights-list">
-              <li>Machine learning algorithms</li>
-              <li>Predictive analytics</li>
-              <li>Custom dashboard creation</li>
-              <li>Real-time data visualization</li>
-              <li>Automated reporting</li>
-            </ul>
-          </div>
-          <div class="content-panel" id="results">
             <h3>Results</h3>
             <p>
-              Connect with thousands of apps and services through our universal
-              API. Built to work with your existing tools and workflows.
+              The results show that GRUGCN achieved marginal improvements on the Milan dataset for HAR, particularly on longer-duration activities, but failed to consistently outperform simpler temporal
+models like the LSTM baseline. For the Aruba dataset, the CNN and LSTM models performed more reliably. This shows that the GRUGCN model is more sensitive to dataset properties like sensor density and noise. For HAP, the GRUGCN model lagged behind both the CNN and LSTM models on average and displayed a strong tendency to default to majority-class predictions<br>
+
+My evaluation showed that the incorporation of adaptive mechanisms, particularly the attention-based variant, consistently improved performance across both datasets for HAR and HAP. The node embeddings approach had mixed success as it improved results on Aruba but were detrimental for Milan. These improvements confirm static graph structures like the traditional GRUGCN model limit its effectiveness and adaptive learning can better capture dynamic
             </p>
-            <ul class="insights-list">
-              <li>RESTful API architecture</li>
-              <li>WebSocket support</li>
-              <li>SDK for major platforms</li>
-              <li>One-click integrations</li>
-              <li>Custom webhook support</li>
-            </ul>
           </div>
+          <div class="content-panel" id="results">
+            <h3>Deliverables</h3>
+            <p>Access my deliverables below:</p>
+            <div class="individual-downloads-container">
+              <a
+                href="../resources/PTHKIS001_literature_review.pdf"
+                download="3DHAR-AI Literature Review - Andrew Erasmus.pdf"
+                style="text-decoration: none"
+                ><button class="download-button deliverable-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    id="Download--Streamline-Sharp-Material"
+                    height="24"
+                    width="24"
+                  >
+                    <desc>
+                      Download Streamline Icon: https://streamlinehq.com
+                    </desc>
+                    <path
+                      fill="#f2f2f2"
+                      d="m12 16.175 -4.825 -4.825 1.075 -1.075 3 3V4h1.5v9.275l3 -3 1.075 1.075L12 16.175ZM4 20V14.925h1.5V18.5h13v-3.575h1.5V20H4Z"
+                      stroke-width="0.5"
+                    ></path>
+                  </svg>
+                  Literature Review
+                </button></a
+              >
+              <a
+                href="../resources/3DHAR-AI Final Paper - Andrew Erasmus.pdf"
+                download="3DHAR-AI Final Paper - Andrew Erasmus.pdf"
+                style="text-decoration: none"
+                ><button class="download-button deliverable-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    id="Download--Streamline-Sharp-Material"
+                    height="24"
+                    width="24"
+                  >
+                    <desc>
+                      Download Streamline Icon: https://streamlinehq.com
+                    </desc>
+                    <path
+                      fill="#f2f2f2"
+                      d="m12 16.175 -4.825 -4.825 1.075 -1.075 3 3V4h1.5v9.275l3 -3 1.075 1.075L12 16.175ZM4 20V14.925h1.5V18.5h13v-3.575h1.5V20H4Z"
+                      stroke-width="0.5"
+                    ></path>
+                  </svg>
+                  Final Paper
+                </button></a
+              >
+              <a
+                href="https://github.com/andrew-erasmus/DSTAGNN-HAR"
+                download="3DHAR-AI Proposal.pdf"
+                style="text-decoration: none"
+                target="_blank"
+                ><button class="download-button deliverable-button">
+                  Source Code ➡️
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </section>
