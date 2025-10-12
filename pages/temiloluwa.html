@@ -72,7 +72,7 @@
       <h2 class="section-title">Core Contributions</h2>
       <div class="insights-container">
         <div class="insights-tabs">
-          <div class="tab-item active" data-tab="eda"><span class="tab-icon">🧮</span><span>EDA</span></div>
+          <div class="tab-item active" data-tab="eda"><span class="tab-icon">🧮</span><span>EDA & Data Preprocessing</span></div>
           <div class="tab-item" data-tab="pipeline"><span class="tab-icon">⚙️</span><span>Pipeline Development</span></div>
           <div class="tab-item" data-tab="results"><span class="tab-icon">📊</span><span>Results</span></div>
           <div class="tab-item" data-tab="graphs"><span class="tab-icon">🌐</span><span>Graph Analysis</span></div>
@@ -82,10 +82,10 @@
         <div class="insights-content">
           <!-- EDA -->
           <div class="content-panel active" id="eda">
-            <h3>Exploratory Data Analysis (EDA)</h3>
+            <h3>Exploratory Data Analysis (EDA) & Preprocessing</h3>
             <p>
               My analysis began by cleaning and structuring the <strong>CASAS Aruba</strong> and <strong>Milan</strong> datasets.
-              These datasets include motion, door, and temperature sensors — each producing irregular, event-driven readings.
+              These datasets include motion, door, and temperature sensors each producing irregular, event-driven readings.
               To prepare them for modeling, I:
             </p>
             <ul class="insights-list">
@@ -104,14 +104,14 @@
           <div class="content-panel" id="pipeline">
             <h3>Pipeline Development</h3>
             <p>
-              I designed a complete machine learning pipeline — from temporal feature extraction to model evaluation — to
+              I designed a complete machine learning pipeline, from temporal feature extraction to model evaluation, to
               benchmark traditional and graph-based architectures for Human Activity Recognition (HAR) and Prediction (HAP).
             </p>
             <ul class="insights-list">
               <li>Structured the data into 4D tensors <code>(windows × steps × sensors × features)</code>.</li>
-              <li>Implemented and optimized four models: CNN, LSTM, Graph WaveNet (GWN), and Adaptive Graph Convolutional Recurrent Network (AGCRN).</li>
+              <li>Implemented and optimized two models: Graph WaveNet (GWN), and Adaptive Graph Convolutional Recurrent Network (AGCRN).</li>
               <li>Used <strong>3-fold walk-forward validation</strong> to preserve temporal order and avoid data leakage.</li>
-              <li>Conducted hyperparameter optimization with <strong>Optuna</strong> using Bayesian optimization (TPE).</li>
+              <li>Conducted hyperparameter optimization with <strong>Optuna</strong> using Bayesian optimization.</li>
               <li>Executed all experiments on UCT’s High-Performance Computing cluster (L40s GPU partition).</li>
             </ul>
           </div>
@@ -125,17 +125,17 @@
             </p>
             <ul class="insights-list">
               <li>
-                <strong>HAR:</strong> On Aruba, LSTM and AGCRN achieved the best weighted F1 (~0.82). On Milan, CNN slightly outperformed others (~0.54 F1).
+                <strong>HAR:</strong> On Aruba, LSTM and AGCRN achieved the best weighted F1 (0.82). On Milan, CNN slightly outperformed others (0.54 F1).
               </li>
               <li>
                 <strong>HAP:</strong> Performance dropped on both datasets (≤0.56 F1). AGCRN again matched the best baseline.
               </li>
               <li>
-                <strong>Computation:</strong> AGCRN required up to 2.2 hours of training (vs. 3.5 min for LSTM) and was ~150× slower in inference.
+                <strong>Computation:</strong> AGCRN required up to 2.2 hours of training (vs. 3.5 min for LSTM) and was approximately 150× slower in inference.
               </li>
             </ul>
             <p>
-              Overall, STGNNs offered interpretability advantages — revealing inter-room activity flows — without clear accuracy gains.
+              Overall, STGNNs offered interpretability advantages, revealing inter-room activity flows — without clear accuracy gains.
             </p>
           </div>
 
@@ -154,7 +154,7 @@
               </li>
               <li>
                 These findings show that graph-based models encode <strong>semantic movement pathways</strong>,
-                improving interpretability — even when accuracy gains are modest.
+                improving interpretability even when accuracy gains are modest.
               </li>
             </ul>
             <p>
@@ -168,6 +168,11 @@
             <div class="individual-downloads-container">
               <a href="../resources/3DHAR-AI Final Paper - Temiloluwa Aina.pdf"
                  download="3DHAR-AI Final Paper - Temiloluwa Aina.pdf"
+                 style="text-decoration:none">
+                <button class="download-button deliverable-button">📘 Final Paper</button>
+              </a>
+              <a href="../resources/Temiloluwa Aina 3DHAR-AI Literature Review.pdf"
+                 download="3DHAR-AI Literature Review - Temiloluwa Aina.pdf"
                  style="text-decoration:none">
                 <button class="download-button deliverable-button">📘 Final Paper</button>
               </a>
