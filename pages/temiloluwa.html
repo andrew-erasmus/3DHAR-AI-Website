@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link href="../styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../images/blue-brain.ico" />
   </head>
   <body>
     <!-- Background and Animations -->
@@ -26,18 +27,41 @@
     <nav id="navbar">
       <div class="nav-container">
         <a href="#home" class="logo-link">
-          <svg class="logo-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            class="logo-svg"
+            viewBox="0 0 40 40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <defs>
-              <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#0b59de;stop-opacity:1" />
-                <stop offset="100%" style="stop-color:#f2f2f2;stop-opacity:1" />
+              <linearGradient
+                id="logoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop
+                  offset="0%"
+                  style="stop-color: #0b59de; stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: #f2f2f2; stop-opacity: 1"
+                />
               </linearGradient>
             </defs>
-            <polygon points="20,2 38,14 38,26 20,38 2,26 2,14"
-                     fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
-            <polygon points="20,8 32,16 32,24 20,32 8,24 8,16"
-                     fill="url(#logoGradient)" opacity="0.3"/>
-            <circle cx="20" cy="20" r="3" fill="url(#logoGradient)"/>
+            <polygon
+              points="20,2 38,14 38,26 20,38 2,26 2,14"
+              fill="none"
+              stroke="url(#logoGradient)"
+              stroke-width="2"
+            />
+            <polygon
+              points="20,8 32,16 32,24 20,32 8,24 8,16"
+              fill="url(#logoGradient)"
+              opacity="0.3"
+            />
+            <circle cx="20" cy="20" r="3" fill="url(#logoGradient)" />
           </svg>
           <span class="logo-text">3DHAR-AI</span>
         </a>
@@ -62,7 +86,9 @@
         </div>
       </div>
       <div class="cta-container">
-        <a href="#insights" class="cta-button cta-primary">Explore Contributions</a>
+        <a href="#insights" class="cta-button cta-primary"
+          >Explore Contributions</a
+        >
         <a href="../index.html" class="cta-button cta-secondary">Return Home</a>
       </div>
     </section>
@@ -72,11 +98,22 @@
       <h2 class="section-title">Core Contributions</h2>
       <div class="insights-container">
         <div class="insights-tabs">
-          <div class="tab-item active" data-tab="eda"><span class="tab-icon">🧮</span><span>EDA & Data Preprocessing</span></div>
-          <div class="tab-item" data-tab="pipeline"><span class="tab-icon">⚙️</span><span>Pipeline Development</span></div>
-          <div class="tab-item" data-tab="results"><span class="tab-icon">📊</span><span>Results</span></div>
-          <div class="tab-item" data-tab="graphs"><span class="tab-icon">🌐</span><span>Graph Analysis</span></div>
-          <div class="tab-item" data-tab="deliverables"><span class="tab-icon">📎</span><span>Deliverables</span></div>
+          <div class="tab-item active" data-tab="eda">
+            <span class="tab-icon">🧮</span
+            ><span>EDA & Data Preprocessing</span>
+          </div>
+          <div class="tab-item" data-tab="pipeline">
+            <span class="tab-icon">⚙️</span><span>Pipeline Development</span>
+          </div>
+          <div class="tab-item" data-tab="results">
+            <span class="tab-icon">📊</span><span>Results</span>
+          </div>
+          <div class="tab-item" data-tab="graphs">
+            <span class="tab-icon">🌐</span><span>Graph Analysis</span>
+          </div>
+          <div class="tab-item" data-tab="deliverables">
+            <span class="tab-icon">📎</span><span>Deliverables</span>
+          </div>
         </div>
 
         <div class="insights-content">
@@ -84,19 +121,34 @@
           <div class="content-panel active" id="eda">
             <h3>Exploratory Data Analysis (EDA) & Preprocessing</h3>
             <p>
-              My analysis began by cleaning and structuring the <strong>CASAS Aruba</strong> and <strong>Milan</strong> datasets.
-              These datasets include motion, door, and temperature sensors each producing irregular, event-driven readings.
-              To prepare them for modeling, I:
+              My analysis began by cleaning and structuring the
+              <strong>CASAS Aruba</strong> and <strong>Milan</strong> datasets.
+              These datasets include motion, door, and temperature sensors each
+              producing irregular, event-driven readings. To prepare them for
+              modeling, I:
             </p>
             <ul class="insights-list">
-              <li>Removed duplicate activations and corrected chronological inconsistencies.</li>
-              <li>Encoded categorical sensor states numerically (ON/OFF → 1/−1) and normalized temperature readings.</li>
-              <li>Handled missing sensor readings using <strong>forward imputation</strong> to maintain continuity across time steps.</li>
+              <li>
+                Removed duplicate activations and corrected chronological
+                inconsistencies.
+              </li>
+              <li>
+                Encoded categorical sensor states numerically (ON/OFF → 1/−1)
+                and normalized temperature readings.
+              </li>
+              <li>
+                Handled missing sensor readings using
+                <strong>forward imputation</strong> to maintain continuity
+                across time steps.
+              </li>
             </ul>
             <p>
-              Since sensors activate at irregular intervals, I engineered new temporal features:
-              <strong>Δt<sub>global</sub></strong> (time since last event) and <strong>Δt<sub>sensor</sub></strong> (time since sensor activation),
-              both log-normalized to handle scale skew. This significantly improved model performance over fixed sampling.
+              Since sensors activate at irregular intervals, I engineered new
+              temporal features:
+              <strong>Δt<sub>global</sub></strong> (time since last event) and
+              <strong>Δt<sub>sensor</sub></strong> (time since sensor
+              activation), both log-normalized to handle scale skew. This
+              significantly improved model performance over fixed sampling.
             </p>
           </div>
 
@@ -104,15 +156,32 @@
           <div class="content-panel" id="pipeline">
             <h3>Pipeline Development</h3>
             <p>
-              I designed a complete machine learning pipeline, from temporal feature extraction to model evaluation, to
-              benchmark traditional and graph-based architectures for Human Activity Recognition (HAR) and Prediction (HAP).
+              I designed a complete machine learning pipeline, from temporal
+              feature extraction to model evaluation, to benchmark traditional
+              and graph-based architectures for Human Activity Recognition (HAR)
+              and Prediction (HAP).
             </p>
             <ul class="insights-list">
-              <li>Structured the data into 4D tensors <code>(windows × steps × sensors × features)</code>.</li>
-              <li>Implemented and optimized two models: Graph WaveNet (GWN), and Adaptive Graph Convolutional Recurrent Network (AGCRN).</li>
-              <li>Used <strong>3-fold walk-forward validation</strong> to preserve temporal order and avoid data leakage.</li>
-              <li>Conducted hyperparameter optimization with <strong>Optuna</strong> using Bayesian optimization.</li>
-              <li>Executed all experiments on UCT’s High-Performance Computing cluster (L40s GPU partition).</li>
+              <li>
+                Structured the data into 4D tensors
+                <code>(windows × steps × sensors × features)</code>.
+              </li>
+              <li>
+                Implemented and optimized two models: Graph WaveNet (GWN), and
+                Adaptive Graph Convolutional Recurrent Network (AGCRN).
+              </li>
+              <li>
+                Used <strong>3-fold walk-forward validation</strong> to preserve
+                temporal order and avoid data leakage.
+              </li>
+              <li>
+                Conducted hyperparameter optimization with
+                <strong>Optuna</strong> using Bayesian optimization.
+              </li>
+              <li>
+                Executed all experiments on UCT’s High-Performance Computing
+                cluster (L40s GPU partition).
+              </li>
             </ul>
           </div>
 
@@ -120,22 +189,29 @@
           <div class="content-panel" id="results">
             <h3>Results</h3>
             <p>
-              Across both datasets, Spatial-Temporal Graph Neural Networks (STGNNs) achieved accuracy comparable to
-              CNNs and LSTMs but required significantly more computation.
+              Across both datasets, Spatial-Temporal Graph Neural Networks
+              (STGNNs) achieved accuracy comparable to CNNs and LSTMs but
+              required significantly more computation.
             </p>
             <ul class="insights-list">
               <li>
-                <strong>HAR:</strong> On Aruba, LSTM and AGCRN achieved the best weighted F1 (0.82). On Milan, CNN slightly outperformed others (0.54 F1).
+                <strong>HAR:</strong> On Aruba, LSTM and AGCRN achieved the best
+                weighted F1 (0.82). On Milan, CNN slightly outperformed others
+                (0.54 F1).
               </li>
               <li>
-                <strong>HAP:</strong> Performance dropped on both datasets (≤0.56 F1). AGCRN again matched the best baseline.
+                <strong>HAP:</strong> Performance dropped on both datasets
+                (≤0.56 F1). AGCRN again matched the best baseline.
               </li>
               <li>
-                <strong>Computation:</strong> AGCRN required up to 2.2 hours of training (vs. 3.5 min for LSTM) and was approximately 150× slower in inference.
+                <strong>Computation:</strong> AGCRN required up to 2.2 hours of
+                training (vs. 3.5 min for LSTM) and was approximately 150×
+                slower in inference.
               </li>
             </ul>
             <p>
-              Overall, STGNNs offered interpretability advantages, revealing inter-room activity flows — without clear accuracy gains.
+              Overall, STGNNs offered interpretability advantages, revealing
+              inter-room activity flows — without clear accuracy gains.
             </p>
           </div>
 
@@ -143,22 +219,31 @@
           <div class="content-panel" id="graphs">
             <h3>Graph Analysis</h3>
             <p>
-              I extracted and visualized the learned adjacency matrices from AGCRN and Graph WaveNet to interpret how
-              models captured spatial relationships in smart homes.
+              I extracted and visualized the learned adjacency matrices from
+              AGCRN and Graph WaveNet to interpret how models captured spatial
+              relationships in smart homes.
             </p>
             <ul class="insights-list">
-              <li>Both models learned <strong>meaningful inter-room connections</strong> rather than local co-activations.</li>
               <li>
-                AGCRN captured realistic transitions like <em>Work → Meal Preparation</em> and <em>Meal Preparation → Relax</em>,
-                aligning with empirical activity probabilities.
+                Both models learned
+                <strong>meaningful inter-room connections</strong> rather than
+                local co-activations.
               </li>
               <li>
-                These findings show that graph-based models encode <strong>semantic movement pathways</strong>,
-                improving interpretability even when accuracy gains are modest.
+                AGCRN captured realistic transitions like
+                <em>Work → Meal Preparation</em> and
+                <em>Meal Preparation → Relax</em>, aligning with empirical
+                activity probabilities.
+              </li>
+              <li>
+                These findings show that graph-based models encode
+                <strong>semantic movement pathways</strong>, improving
+                interpretability even when accuracy gains are modest.
               </li>
             </ul>
             <p>
-              This transparency strengthens model trustworthiness, a key requirement for safety-critical applications like assisted living.
+              This transparency strengthens model trustworthiness, a key
+              requirement for safety-critical applications like assisted living.
             </p>
           </div>
 
@@ -166,19 +251,32 @@
           <div class="content-panel" id="deliverables">
             <h3>Deliverables</h3>
             <div class="individual-downloads-container">
-              <a href="../resources/3DHAR-AI Final Paper - Temiloluwa Aina.pdf"
-                 download="3DHAR-AI Final Paper - Temiloluwa Aina.pdf"
-                 style="text-decoration:none">
-                <button class="download-button deliverable-button">📘 Final Paper</button>
+              <a
+                href="../resources/3DHAR-AI Final Paper - Temiloluwa Aina.pdf"
+                download="3DHAR-AI Final Paper - Temiloluwa Aina.pdf"
+                style="text-decoration: none"
+              >
+                <button class="download-button deliverable-button">
+                  📘 Final Paper
+                </button>
               </a>
-              <a href="../resources/Temiloluwa Aina 3DHAR-AI Literature Review.pdf"
-                 download="3DHAR-AI Literature Review - Temiloluwa Aina.pdf"
-                 style="text-decoration:none">
-                <button class="download-button deliverable-button">📘 Literature Review</button>
+              <a
+                href="../resources/Temiloluwa Aina 3DHAR-AI Literature Review.pdf"
+                download="3DHAR-AI Literature Review - Temiloluwa Aina.pdf"
+                style="text-decoration: none"
+              >
+                <button class="download-button deliverable-button">
+                  📘 Literature Review
+                </button>
               </a>
-              <a href="https://github.com/thatboytemi/3DHAR-AI" target="_blank"
-                 style="text-decoration:none">
-                <button class="download-button deliverable-button">💻 Source Code ➡️</button>
+              <a
+                href="https://github.com/thatboytemi/3DHAR-AI"
+                target="_blank"
+                style="text-decoration: none"
+              >
+                <button class="download-button deliverable-button">
+                  💻 Source Code ➡️
+                </button>
               </a>
             </div>
           </div>
@@ -191,7 +289,12 @@
       <div class="footer-content">
         <p class="copyright">
           © 2025 3DHAR-AI | Design by
-          <a href="https://templatemo.com" target="_blank" rel="nofollow noopener">TemplateMo</a>
+          <a
+            href="https://templatemo.com"
+            target="_blank"
+            rel="nofollow noopener"
+            >TemplateMo</a
+          >
         </p>
       </div>
     </footer>
