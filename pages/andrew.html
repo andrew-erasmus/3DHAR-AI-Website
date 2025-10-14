@@ -125,8 +125,12 @@ https://templatemo.com/tm-596-electric-xtra
             <span class="tab-icon">🛠️</span>
             <span>Data Augmentation</span>
           </div>
-          <div class="tab-item" data-tab="deliverables">
+          <div class="tab-item" data-tab="results">
             <span class="tab-icon">📊</span>
+            <span>Results</span>
+          </div>
+          <div class="tab-item" data-tab="deliverables">
+            <span class="tab-icon">✅</span>
             <span>Deliverables</span>
           </div>
         </div>
@@ -224,6 +228,115 @@ https://templatemo.com/tm-596-electric-xtra
               in the <strong>"Deliverables"</strong> section below
             </p>
           </div>
+          <div class="content-panel" id="results">
+            <h3>Human Activity Recognition (HAR)</h3>
+            <p>
+              <strong>DSTAGNN</strong> generally achieved enhanced performance
+              for the HAR task compared to baselines, demonstrating strong
+              capabilities in capturing complex dependencies.
+            </p>
+            <ul class="insights-list">
+              <li>
+                <strong>CASAS Milan Dataset</strong>: DSTAGNN
+                <strong>greatly outperformed</strong> all baselines, achieving
+                the highest F1-score of <span class="highlight">0.59</span> and
+                showing the least per-fold variation, possibly indicating high
+                <strong>robustness</strong>.
+              </li>
+              <li>
+                <strong>CASAS Aruba Dataset</strong>: DSTAGNN achieved a strong
+                F1-score of <span class="highlight">0.80</span>, but was
+                <strong>outperformed by LSTM</strong> (0.82), suggesting that
+                LSTM's focus on high-frequency temporal patterns was better
+                suited for this routine dataset.
+              </li>
+              <li>
+                <strong>STGNN Comparison</strong>: DSTAGNN was consistently
+                <strong>more effective</strong> than the other Spatio-Temporal
+                Graph Neural Network (Graph WaveNet, GWN).
+              </li>
+            </ul>
+            <p></p>
+            <p></p>
+            <h3>Human Activity Prediction (HAP)</h3>
+            <p>
+              HAP proved to be a <strong>challenging task</strong> for all
+              tested algorithms, resulting in lower performance metrics and
+              overall stability compared to HAR.
+            </p>
+            <ul class="insights-list">
+              <li>
+                <strong>Comparable Performance</strong>: DSTAGNN achieved
+                <strong>comparable performance</strong> to the best-performing
+                baselines (CNN, LSTM, and GWN) on both the Milan and Aruba
+                datasets.
+              </li>
+              <li>
+                <strong>Stability</strong>: DSTAGNN demonstrated the
+                <strong>most stable variability</strong> (lowest standard error)
+                across all folds and datasets, suggesting it is
+                <span class="highlight">more robust</span> against data
+                variations than its counterparts in the challenging prediction
+                task.
+              </li>
+            </ul>
+
+            <p></p>
+            <p></p>
+
+            <h3>Data Augmentation</h3>
+            <p>
+              A novel data augmentation strategy, using a custom
+              <strong>3D digital twin</strong> environment to generate synthetic
+              activities, was introduced to address class imbalance.
+            </p>
+            <ul class="insights-list">
+              <li>
+                <strong>Impact on HAR</strong>: The strategy showed
+                <strong>drastic performance gains</strong> for the Human
+                Activity Recognition (HAR) task, effectively improving the
+                model's ability to classify underrepresented activities.
+              </li>
+              <li>
+                <strong>Impact on HAP</strong>: The strategy resulted in
+                <strong>variable and less consistent results</strong> for the
+                more challenging Human Activity Prediction (HAP) task.
+              </li>
+              <li>
+                <strong>Methodology</strong>: The method involved manually
+                recording an activity with a 3D agent and using time
+                interpolation to seamlessly insert the new synthetic sensor
+                activations into the original dataset's temporal flow.
+              </li>
+            </ul>
+            <p></p>
+            <p></p>
+            <h3>Tables</h3>
+            <div class="sim-image-container">
+              <img
+                class="results-image"
+                src="../images/andrew-har.png"
+                alt=""
+              />
+              <p>Weighted Average F1 Score for HAR</p>
+
+              <img
+                class="results-image"
+                src="../images/andrew-hap.png"
+                alt=""
+              />
+              <p>Weighted Average F1 Score for HAP</p>
+
+              <img
+                class="results-image"
+                src="../images/andrew-data-aug.png"
+                alt=""
+              />
+              <p>
+                Change in Weighted Average F1 Scores (%) after Data Augmentation
+              </p>
+            </div>
+          </div>
           <div class="content-panel" id="data-aug">
             <h3>Data Augmentation</h3>
             <p>
@@ -273,15 +386,23 @@ https://templatemo.com/tm-596-electric-xtra
               human activity data.
             </p>
             <h3>Images:</h3>
-            <div class="sim-image-container">
+            <div class="image-container">
               <img
-                class="sim-image"
+                class="results-image"
                 style="margin-top: 20px"
                 src="../images/data-aug-1.png"
                 alt=""
               />
-              <img class="sim-image" src="../images/data-aug-2.png" alt="" />
-              <img class="sim-image" src="../images/data-aug-3.png" alt="" />
+              <img
+                class="results-image"
+                src="../images/data-aug-2.png"
+                alt=""
+              />
+              <img
+                class="results-image"
+                src="../images/data-aug-3.png"
+                alt=""
+              />
             </div>
           </div>
           <div class="content-panel" id="deliverables">

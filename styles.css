@@ -1424,12 +1424,12 @@ footer {
   width: 100%;
 }
 
-.sim-image-container {
+.image-container {
   width: 100%;
   text-align: center;
 }
 
-.sim-image {
+.results-image {
   max-width: 80%;
   height: auto;
   margin-top: 10px;
